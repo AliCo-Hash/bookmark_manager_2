@@ -4,8 +4,9 @@
 feature 'Shows bookmarks' do
     scenario 'shows the list of bookmarks on the webpage' do
       visit('/bookmarks')
-      expect(page).to have_content "www.google.com"
-      expect(page).to have_content "www.youtube.com"
+      expect(page).to have_content "http://www.makersacademy.com/"
+      expect(page).to have_content "http://www.google.com/"
+      expect(page).to have_content "http://www.destroyallsoftware.com"
   end
 end
       
