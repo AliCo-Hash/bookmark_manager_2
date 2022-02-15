@@ -28,13 +28,19 @@ Test Database Instructions:
 
 
 ```
-User story:
+User story 1:
 
 As an internet user
 In order to have quick access to websites I use frequently
 I would like to access a list of website bookmarks
 ```
+```
+User story 2:
 
+As and internet user
+In order to revisit frequently used websites
+I would like to add bookmarks to the list
+```
 
 Domain Model:
 

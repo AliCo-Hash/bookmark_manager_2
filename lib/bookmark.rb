@@ -16,4 +16,9 @@ class Bookmark
     end
     @bookmarks
   end
+
+  def self.create(website)
+    conn = PG.connect(dbname: 'bookmark_manager')
+    conn.exec( "INSERT INTO bookmarks(url) VALUES('#{website}')" )
+  end
 end
