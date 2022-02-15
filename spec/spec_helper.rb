@@ -1,8 +1,10 @@
 # Set the environment to "test"
 ENV['RACK_ENV'] = 'test'
+ENV['ENVIRONMENT'] = 'test'
 
 # Bring in the contents of the `app.rb` file. The below is equivalent to: require_relative '../app.rb'
 require_relative '../app.rb'
+require_relative './features/truncate_table_helper.rb'
 
 # Require all the testing gems
 require 'capybara'
