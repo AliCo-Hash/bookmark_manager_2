@@ -15,12 +15,14 @@ class BookmarkManager < Sinatra::Base
     @bookmarks = Bookmark.all
     erb :'bookmarks/index'
   end
-  
-  get '/bookmarks/create' do
-    website = params[:website]
-    Bookmark.create(website)
-    erb :'bookmarks/create'
+
+  post '/bookmarks' do
+    Bookmark.create(params[:website])
     redirect '/bookmarks'
+  end
+
+  get '/bookmarks/create' do
+    erb :'bookmarks/create'
   end
 
   run! if app_file == $0
